@@ -1,0 +1,19 @@
+NAME	=	megaphone
+
+SRCS	=	$(wildcard *.cpp)
+
+CLANG	=	clang++
+
+all		:	$(NAME)
+
+$(NAME)	:
+			@$(CLANG) $(SRCS) -o $(NAME)
+			@echo "\033[0;34mMEGAPHONE COMPILED\033[0;0m"
+
+clean	:
+			rm -f $(NAME)
+			@echo "\033[0;35mMEGAPHONE CLEAN\033[0;0m"
+
+re		:	clean all
+
+.PHONY	:	all clean re
