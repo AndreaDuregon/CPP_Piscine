@@ -6,91 +6,211 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 09:54:00 by aduregon          #+#    #+#             */
-/*   Updated: 2021/04/26 13:06:41 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/04/26 19:21:06 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+
+int	check_email(std::string s)
+{
+	int i;
+
+	i = 0;
+	while (s[i])
+		if (s[i++] == 64)
+			return 1;
+	return 0;
+}
+
+int	check_number(std::string s)
+{
+	int i;
+
+	i = 0;
+	while (s[i])
+		if (!(std::isdigit(s[i++])))
+			return 0;
+	return 1;
+}
+
+int	check_date(std::string s)
+{
+	return (std::isdigit(s[0]) && std::isdigit(s[1]) && s[2] == 47 &&
+			std::isdigit(s[3]) && std::isdigit(s[4]) && s[5] == 47 &&
+			std::isdigit(s[6]) && std::isdigit(s[7]) && std::isdigit(s[8]) && std::isdigit(s[9]));
+}
 
 Contact	add_contact()
 {
 	Contact c;
 	std::string	s;
 
-	getline(std::cin, s);
 	std::cout << "INSERT FIRST NAME: ";
 	getline(std::cin, s);
-	std::cout << std::endl;
 	c.set_first_name(s);
 	std::cout << "INSERT LAST NAME: ";
 	getline(std::cin, s);
-	std::cout << std::endl;
 	c.set_last_name(s);
 	std::cout << "INSERT NICKNAME: ";
 	getline(std::cin, s);
-	std::cout << std::endl;
 	c.set_nickname(s);
 	std::cout << "INSERT LOGIN: ";
 	getline(std::cin, s);
-	std::cout << std::endl;
 	c.set_login(s);
 	std::cout << "INSERT POSTAL ADDRESS: ";
 	getline(std::cin, s);
-	std::cout << std::endl;
 	c.set_postal_address(s);
-	std::cout << "INSERT EMAIL ADDRESS: ";
-	getline(std::cin, s);
-	std::cout << std::endl;
-	c.set_email_address(s);
-	std::cout << "INSERT PHONE NUMBER: ";
-	getline(std::cin, s);
-	std::cout << std::endl;
-	c.set_phone_number(s);
-	std::cout << "INSERT BIRTHDAY DATE: ";
-	getline(std::cin, s);
-	std::cout << std::endl;
-	c.set_birthday_date(s);
+	while (1)
+	{
+		std::cout << "INSERT EMAIL ADDRESS: ";
+		getline(std::cin, s);
+		if (check_email(s))
+		{
+			c.set_email_address(s);
+			break ;
+		}
+		else
+			std::cout << "EMAIL ADDRESS NOT VALID!\n";
+	}
+	while (1)
+	{
+		std::cout << "INSERT PHONE NUMBER: ";
+		getline(std::cin, s);
+		if (check_number(s))
+		{
+			c.set_phone_number(s);
+			break ;
+		}
+		else
+			std::cout << "NUMBER NOT VALID\n";
+
+	}
+	while (1)
+	{
+		std::cout << "INSERT BIRTHDAY DATE (DD/MM/YYYY): ";
+		getline(std::cin, s);
+		if (check_date(s))
+		{
+			c.set_birthday_date(s);
+			break ;
+		}
+		else
+			std::cout << "DATE FORMAT NOT VALID\n";
+	}
 	std::cout << "INSERT FAVORITE MEAL: ";
 	getline(std::cin, s);
-	std::cout << std::endl;
 	c.set_favorite_meal(s);
 	std::cout << "INSERT UNDERWEAR COLOR: ";
 	getline(std::cin, s);
-	std::cout << std::endl;
 	c.set_underwear_color(s);
 	std::cout << "INSERT DARKEST SECRET: ";
 	getline(std::cin, s);
-	std::cout << std::endl;
 	c.set_darkest_secret(s);
 
 	return (c);
 }
 
-void	print_phonebook(Contact p[8], int j)
+void	list_phonebook(Contact p[8], int j)
 {
-	int i = 0;
+	int i;
+	int	k;
+	int	z;
+	std::string	fn;
+	std::string ln;
+	std::string nn;
 
+	i = 0;
 	while (i < j)
 	{
-		p[i].get_first_name();
-		p[i].get_last_name();
-		p[i].get_nickname();
-		p[i].get_login();
-		p[i].get_postal_address();
-		p[i].get_email_address();
-		p[i].get_phone_number();
-		p[i].get_birthday_date();
-		p[i].get_favorite_meal();
-		p[i].get_underwear_color();
-		p[i].get_darkest_secret();
+		fn = p[i].get_first_name();
+		ln = p[i].get_last_name();
+		nn = p[i].get_nickname();
+		k = 9;
+		while (k-- > 0)
+			std::cout << " ";
+		std::cout << i << "|";
+		k = 10;
+		while (k-- > int(fn.length()))
+			std::cout << " ";
+		if (fn.length() > 10)
+		{
+			z = 0;
+			while(z < 9)
+				std::cout << fn[z++];
+			std::cout << ".";
+		}
+		else
+			std::cout << fn;
+		std::cout << "|";
+		k = 10;
+		while (k-- > int(ln.length()))
+			std::cout << " ";
+		if (ln.length() > 10)
+		{
+			z = 0;
+			while(z < 9)
+				std::cout << ln[z++];
+			std::cout << ".";
+		}
+		else
+			std::cout << ln;
+		std::cout << "|";
+		k = 10;
+		while (k-- > int(nn.length()))
+			std::cout << " ";
+		if (nn.length() > 10)
+		{
+			z = 0;
+			while(z < 9)
+				std::cout << nn[z++];
+			std::cout << ".";
+		}
+		else
+			std::cout << nn;
+		std::cout << std::endl;
 		i++;
 	}
 }
 
+void	search_phonebook(Contact p[8], int j)
+{
+	std::string	index;
+	int		i;
+
+	std::cout << "INSERT INDEX DESIRED: ";
+	getline(std::cin, index);
+	i = 0;
+	while (index[i])
+		if (!(std::isdigit(index[i++])))
+		{
+			std::cout << "INDEX NOT VALID!\n";
+			return ;
+		}
+	i = std::stoi(index);
+	if (i > j - 1)
+		std::cout << "CONTACT DOESN'T EXIST!\n";
+	else
+	{
+		std::cout << "First name: " << p[i].get_first_name() << std::endl;
+		std::cout << "Last name: " << p[i].get_last_name() << std::endl;
+		std::cout << "Nickname: " << p[i].get_nickname() << std::endl;
+		std::cout << "Login: " << p[i].get_login() << std::endl;
+		std::cout << "Posta address: " << p[i].get_postal_address() << std::endl;
+		std::cout << "Email address: " << p[i].get_email_address() << std::endl;
+		std::cout << "Phone number: " << p[i].get_phone_number() << std::endl;
+		std::cout << "Birthday date: " << p[i].get_birthday_date() << std::endl;
+		std::cout << "Favourite meal: " << p[i].get_favorite_meal() << std::endl;
+		std::cout << "Underwear color: " << p[i].get_underwear_color() << std::endl;
+		std::cout << "Darkest secret: " << p[i].get_darkest_secret() << std::endl;
+	}
+
+}
+
 int	main()
 {
-	char	command[6];
-	Contact	phonebook[8];
+	std::string	command;
+	Contact		phonebook[8];
 	int		i;
 	int		j;
 
@@ -100,26 +220,25 @@ int	main()
 	{
 		i = 0;
 		std::cout << "INSERT COMMAND (ADD/SEARCH/EXIT)" << std::endl;
-		std::cin >> command;
+		getline(std::cin, command);
 		while(command[i])
 		{
 			command[i] = char(toupper(command[i]));
 			i++;
 		}
-		if (!(std::strcmp("ADD", command)))
+		if (!(command.compare("ADD")))
 		{
 			if (j < 8)
 				phonebook[j++] = add_contact();
 			else
 				std::cout << "PHONEBOOK FULL" << std::endl;
 		}
-		else if (!(std::strcmp("PRINT", command)))
+		else if (!(command.compare("SEARCH")))
 		{
-			print_phonebook(phonebook, j);
+			list_phonebook(phonebook, j);
+			search_phonebook(phonebook, j);
 		}
-		else if (!(std::strcmp("SEARCH", command)))
-			std::cout << "HAI INSERITO 'SEARCH'" << std::endl;
-		else if (!(std::strcmp("EXIT", command)))
+		else if (!(command.compare("EXIT")))
 			break;
 		else
 			std::cout << command << " comando non valido\n";

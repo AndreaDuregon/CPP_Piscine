@@ -6,7 +6,7 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 09:56:22 by aduregon          #+#    #+#             */
-/*   Updated: 2021/04/26 12:08:17 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/04/26 15:17:39 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,17 +43,17 @@ public:
 	void		set_favorite_meal(std::string s);
 	void		set_underwear_color(std::string s);
 	void		set_darkest_secret(std::string s);
-	void		get_first_name();
-	void		get_last_name();
-	void		get_nickname();
-	void		get_login();
-	void		get_postal_address();
-	void		get_email_address();
-	void		get_phone_number();
-	void		get_birthday_date();
-	void		get_favorite_meal();
-	void		get_underwear_color();
-	void		get_darkest_secret();
+	std::string	get_first_name();
+	std::string	get_last_name();
+	std::string	get_nickname();
+	std::string	get_login();
+	std::string	get_postal_address();
+	std::string	get_email_address();
+	std::string	get_phone_number();
+	std::string	get_birthday_date();
+	std::string	get_favorite_meal();
+	std::string	get_underwear_color();
+	std::string	get_darkest_secret();
 };
 
 #endif

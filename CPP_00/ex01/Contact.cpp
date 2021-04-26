@@ -6,7 +6,7 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 10:33:15 by aduregon          #+#    #+#             */
-/*   Updated: 2021/04/26 12:44:27 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/04/26 15:18:41 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,57 +75,57 @@ void	Contact::set_darkest_secret(std::string s)
 	Contact::darkest_secret = s;
 }
 
-void	Contact::get_first_name()
+std::string	Contact::get_first_name()
 {
-	std::cout << Contact::first_name << std::endl;
+	return(Contact::first_name);
 }
 
-void	Contact::get_last_name()
+std::string	Contact::get_last_name()
 {
-	std::cout << Contact::last_name << std::endl;
+	return(Contact::last_name);
 }
 
-void	Contact::get_nickname()
+std::string	Contact::get_nickname()
 {
-	std::cout << Contact::nickname << std::endl;
+	return(Contact::nickname);
 }
 
-void	Contact::get_login()
+std::string	Contact::get_login()
 {
-	std::cout << Contact::login << std::endl;
+	return(Contact::login);
 }
 
-void	Contact::get_postal_address()
+std::string	Contact::get_postal_address()
 {
-	std::cout << Contact::postal_address << std::endl;
+	return(Contact::postal_address);
 }
 
-void	Contact::get_email_address()
+std::string	Contact::get_email_address()
 {
-	std::cout << Contact::email_address << std::endl;
+	return(Contact::email_address);
 }
 
-void	Contact::get_phone_number()
+std::string	Contact::get_phone_number()
 {
-	std::cout << Contact::phone_number << std::endl;
+	return(Contact::phone_number);
 }
 
-void	Contact::get_birthday_date()
+std::string	Contact::get_birthday_date()
 {
-	std::cout << Contact::birthday_date << std::endl;
+	return(Contact::birthday_date);
 }
 
-void	Contact::get_favorite_meal()
+std::string	Contact::get_favorite_meal()
 {
-	std::cout << Contact::favorite_meal << std::endl;
+	return(Contact::favorite_meal);
 }
 
-void	Contact::get_underwear_color()
+std::string	Contact::get_underwear_color()
 {
-	std::cout << Contact::underwear_color << std::endl;
+	return(Contact::underwear_color);
 }
 
-void	Contact::get_darkest_secret()
+std::string	Contact::get_darkest_secret()
 {
-	std::cout << Contact::darkest_secret << std::endl;
+	return(Contact::darkest_secret);
 }
