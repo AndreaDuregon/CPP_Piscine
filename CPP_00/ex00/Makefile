@@ -4,6 +4,8 @@ SRCS	=	$(wildcard *.cpp)
 
 CLANG	=	clang++
 
+FLAGS	=	-Wall -Wextra -Werror
+
 all		:	$(NAME)
 
 $(NAME)	:
