@@ -1,6 +1,6 @@
 NAME	=	megaphone
 
-SRCS	=	$(wildcard *.cpp)
+SRCS	=	megaphone.cpp
 
 CLANG	=	clang++
 

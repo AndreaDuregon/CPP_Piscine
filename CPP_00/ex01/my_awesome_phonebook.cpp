@@ -6,7 +6,7 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 09:54:00 by aduregon          #+#    #+#             */
-/*   Updated: 2021/04/26 19:21:06 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/04/27 16:17:49 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,6 @@ Contact	add_contact()
 void	list_phonebook(Contact p[8], int j)
 {
 	int i;
-	int	k;
 	int	z;
 	std::string	fn;
 	std::string ln;
@@ -126,13 +125,7 @@ void	list_phonebook(Contact p[8], int j)
 		fn = p[i].get_first_name();
 		ln = p[i].get_last_name();
 		nn = p[i].get_nickname();
-		k = 9;
-		while (k-- > 0)
-			std::cout << " ";
-		std::cout << i << "|";
-		k = 10;
-		while (k-- > int(fn.length()))
-			std::cout << " ";
+		std::cout << std::setw(10) << i << "|";
 		if (fn.length() > 10)
 		{
 			z = 0;
@@ -141,11 +134,8 @@ void	list_phonebook(Contact p[8], int j)
 			std::cout << ".";
 		}
 		else
-			std::cout << fn;
+			std::cout << std::setw(10) << fn;
 		std::cout << "|";
-		k = 10;
-		while (k-- > int(ln.length()))
-			std::cout << " ";
 		if (ln.length() > 10)
 		{
 			z = 0;
@@ -154,11 +144,8 @@ void	list_phonebook(Contact p[8], int j)
 			std::cout << ".";
 		}
 		else
-			std::cout << ln;
+			std::cout << std::setw(10) << ln;
 		std::cout << "|";
-		k = 10;
-		while (k-- > int(nn.length()))
-			std::cout << " ";
 		if (nn.length() > 10)
 		{
 			z = 0;
@@ -167,7 +154,7 @@ void	list_phonebook(Contact p[8], int j)
 			std::cout << ".";
 		}
 		else
-			std::cout << nn;
+			std::cout << std::setw(10) << nn;
 		std::cout << std::endl;
 		i++;
 	}

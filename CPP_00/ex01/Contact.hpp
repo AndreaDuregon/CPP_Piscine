@@ -6,7 +6,7 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 09:56:22 by aduregon          #+#    #+#             */
-/*   Updated: 2021/04/26 15:17:39 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/04/27 16:12:17 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CONTACT_HPP
 
 #include <iostream>
+#include <iomanip>
 
 class Contact
 {
