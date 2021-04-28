@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Human.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 22:55:17 by aduregon          #+#    #+#             */
-/*   Updated: 2021/04/27 23:19:19 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/04/28 10:20:38 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 class Human
 {
 private:
-	const Brain brain;
+	Brain	*brain;
 public:
 	Human();
-	Human(const Brain b);
 	~Human();
 	std::string	identify();
+	Brain	&getBrain();
 };
 
 #endif
