@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 10:27:19 by aduregon          #+#    #+#             */
-/*   Updated: 2021/04/27 12:16:14 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/04/29 12:09:01 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	~ZombieEvent();
 	void		setZombieType(std::string s);
 	Zombie		*newZombie(std::string s);
-	Zombie		*randomChump();
+	void		randomChump();
 };
 
 #endif

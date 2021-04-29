@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 18:11:09 by aduregon          #+#    #+#             */
-/*   Updated: 2021/04/27 22:29:17 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/04/29 12:15:31 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ ZombieHorde::ZombieHorde(int N)
 
 ZombieHorde::~ZombieHorde()
 {
-	
 		delete [] zombie;
 }
 

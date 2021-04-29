@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ZombieEvent.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 10:27:05 by aduregon          #+#    #+#             */
-/*   Updated: 2021/04/27 12:33:23 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/04/29 12:12:27 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Zombie	*ZombieEvent::newZombie(std::string s)
 	return (zombie);
 }
 
-Zombie	*ZombieEvent::randomChump()
+void	ZombieEvent::randomChump()
 {
 	Zombie		*zombie;
 	char		letter[26] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
@@ -52,5 +52,5 @@ Zombie	*ZombieEvent::randomChump()
 		name = name + letter[rand() % 26];
 	zombie->set_name(name);
 	zombie->announce();
-	return (zombie);
+	delete (zombie);
 }
