@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 17:09:28 by aduregon          #+#    #+#             */
-/*   Updated: 2021/04/30 09:15:01 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/04/30 11:55:17 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,41 +15,42 @@
 Fixed::Fixed(/* args */)
 {
 	std::cout << "Default constructor called" << std::endl;
-	this->rawBits = 0;
+	this->raw = 0;
 }
 
 Fixed::Fixed(int const n)
 {
-	this->rawBits = n << this->fractBits;
+	std::cout << "Int constructor called" << std::endl;
+	this->raw = n << this->fractBits;
 }
 
 Fixed::Fixed(float const f)
 {
-	this->rawBits = (int)(roundf(f * (1 << this->fractBits)));
+	std::cout << "Float constructor called" << std::endl;
+	this->raw = (int)(roundf(f * (1 << this->fractBits)));
 }
 
 Fixed::Fixed(Fixed const &copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	this->rawBits = copy.rawBits;
+	this->raw = copy.raw;
 }
 
 int		Fixed::getRawBits() const
 {
-	std::cout << "getRawBits member function called" << std::endl;
-	return (this->rawBits);
+	return (this->raw);
 }
 
 void	Fixed::setRawBits(int const r)
 {
 	std::cout << "setRawBits member function called" << std::endl;
-	this->rawBits = r;
+	this->raw = r;
 }
 
-Fixed	&Fixed::operator = (Fixed const &copy)
+Fixed	&Fixed::operator = (Fixed const &op)
 {
 	std::cout << "Assignation operator called" << std::endl;
-	this->rawBits = copy.getRawBits();
+	this->raw = op.getRawBits();
 	return (*this);
 }
 
@@ -58,18 +59,19 @@ Fixed::~Fixed()
 	std::cout << "Destructor called" << std::endl;
 }
 
-float Fixed::toFloat(void) const
+float	Fixed::toFloat(void) const
 {
-    return ((float)this->rawBits / (float)(1 << this->fractBits));
+	
+	return ((float)this->raw / (float)(1 << this->fractBits));
 }
 
-int Fixed::toInt(void) const
+int		Fixed::toInt(void) const
 {
-    return ((int)(this->rawBits >> this->fractBits));
+	return ((int)roundf(this->getRawBits()) >> this->fractBits);
 }
 
-std::ostream &operator<<(std::ostream &out, const Fixed &f)
+std::ostream& operator << (std::ostream &o, Fixed const &f)
 {
-    out << f.toFloat();
-    return (out);
+    o << f.toFloat();
+    return (o);
 }
