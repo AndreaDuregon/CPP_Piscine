@@ -6,13 +6,16 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 12:35:31 by aduregon          #+#    #+#             */
-/*   Updated: 2021/04/30 17:13:09 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/03 16:37:29 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
+# include <string>
 # include <iostream>
+# include <stdlib.h>
+# include <time.h> 
 
 class FragTrap
 {
@@ -38,14 +41,9 @@ public:
 	FragTrap& operator = (FragTrap const &op);
 	~FragTrap();
 	void		setHitPoint(int h);
-	//void 		setMaxHitPoint(int m);
 	void 		setEnergyPoint(int e);
-	//void 		setMaxEnergyPoint(int e);
 	void 		setLevel(int l);
 	void 		setName(std::string n);
-	// void 		setMeleeAttackDamage(int m);
-	// void 		setRangedAttackDamage(int r);
-	// void 		setArmorDamageReduction(int a);
 	int			getHitPoint();
 	int			getMaxHitPoint();
 	int			getEnergyPoint();

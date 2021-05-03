@@ -6,11 +6,12 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 12:35:27 by aduregon          #+#    #+#             */
-/*   Updated: 2021/04/30 18:53:28 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/03 16:36:20 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+
 
 FragTrap::FragTrap(/* args */)
 {
@@ -23,11 +24,12 @@ FragTrap::FragTrap(/* args */)
 
 FragTrap::FragTrap(std::string n)
 {
-	std::cout << "Name constructor called" << std::endl;
+	std::srand (time(NULL));
 	this->name = n;
 	this->hitPoint = 100;
 	this->energyPoint = 100;
 	this->level = 1;
+	std::cout << "FR4G-T " << this->name << " si sveglia... È pronto per rovinare la giornata di Carl!" << std::endl;
 }
 
 FragTrap::FragTrap(FragTrap const &copy)
@@ -48,7 +50,7 @@ FragTrap& FragTrap::operator = (FragTrap const &op)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "FR4G-T " << "Carl non ne può più... Colpisce " << this->name << " in testa e lo manda a dormire..." << std::endl;
 }
 
 void		FragTrap::setHitPoint(int h)
@@ -56,20 +58,10 @@ void		FragTrap::setHitPoint(int h)
 	this->hitPoint = h;
 }
 
-// void		FragTrap::setMaxHitPoint(int m) cosnt
-// {
-// 	this->maxHitPoint = m;
-// }
-
 void		FragTrap::setEnergyPoint(int e)
 {
 	this->energyPoint = e;
 }
-
-// void		FragTrap::setMaxEnergyPoint(int e)
-// {
-// 	this->maxEnergyPoint = e;
-// }
 
 void		FragTrap::setLevel(int l)
 {
@@ -80,21 +72,6 @@ void		FragTrap::setName(std::string n)
 {
 	this->name = n;
 }
-
-// void		FragTrap::setMeleeAttackDamage(int m)
-// {
-// 	this->meleeAttackDamage = m;
-// }
-
-// void		FragTrap::setRangedAttackDamage(int r)
-// {
-// 	this->rangedAttackDamage = r;
-// }
-
-// void		FragTrap::setArmorDamageReduction(int a)
-// {
-// 	this->armorDamageReduction = a;
-// }
 
 int			FragTrap::getHitPoint()
 {
@@ -143,27 +120,27 @@ int			FragTrap::getArmorDamageReduction()
 
 void		FragTrap::rangedAttack(std::string const &target)
 {
-	std::cout << "FR4G-T " << this->name << " attack " << target << " at range, causing " << this->rangedAttackDamage << " points of damage!" << std::endl;
+	std::cout << "FR4G-T " << this->name << " colpisce uno " << target << " al piede, causando " << this->rangedAttackDamage << " danni e un buco sul piede!" << std::endl;
 }
 
 void		FragTrap::meleeAttack(std::string const &target)
 {
-	std::cout << "FR4G-T " << this->name << " attack " << target << " at melee, causing " << this->meleeAttackDamage << " points of damage!" << std::endl;
+	std::cout << "FR4G-T " << this->name << " colpisce uno " << target << " all'orecchio, causando " << this->meleeAttackDamage << " danni ma lo zombie non ha bisogno di sentire!" << std::endl;
 }
 
 void		FragTrap::takeDamage(unsigned int amount)
 {
 	amount -= this->armorDamageReduction;
 	if ((int)amount < 0)
-		std::cout << this->name << " takes no damage!" << std::endl;
+		std::cout << "FR4G-T: La barzelletta faceva ridere ma " << this->name << "non l'ha capita!" << std::endl;
 	else
 	{
 		this->hitPoint -= amount;
 		if (this->hitPoint < 0)
 			this->hitPoint = 0;
-		std::cout << "FR4G-T " << this->name << " take " << amount << " points of damage! Residual life points: " << this->hitPoint;
+		std::cout << "FR4G-T " << this->name << " se la prende ammale... Si dimentica " << amount << " barzellette poco divertenti! Glie ne restano: " << this->hitPoint;
 		if (this->hitPoint == 0)
-			std::cout << this->name << " is dead!";
+			std::cout << "! " << this->name << " ha finito le barzellette!";
 		std::cout << std::endl;
 	}
 }
@@ -174,63 +151,55 @@ void		FragTrap::beRepaired(unsigned int amount)
 		this->hitPoint = 100;
 	else
 		this->hitPoint += amount;
-	std::cout << "FR4G-T " << this->name << " is been repaired for " << amount << " life points! Residual life points: " << this->hitPoint << std::endl;
+	std::cout << "FR4G-T " << this->name << " ha trovato su facebook " << amount << " barzellette penose! Può sfinire Carl ancora per " << this->hitPoint << " volte!" << std::endl;
 }
 
 void				FragTrap::attack1(std::string const &target)
-{
-	if (this->energyPoint - 25 < 0)
-		std::cout << "FR4G-T " << this->name << " can't attack!" << std::endl;
-	else
-		std::cout << "FR4G-T " << this->name << " attack1 to " << target << std::endl;
+{	
+	std::cout << "FR4G-T " << this->name << ": 'Carl, sai come si chiama il prete che non si può toccare? Don touch... CARL! DON TOUCH!!!' - " << target << " è frastornato!" << std::endl;
 }
 
 void				FragTrap::attack2(std::string const &target)
-{
-	if (this->energyPoint - 25 < 0)
-		std::cout << "FR4G-T " << this->name << " can't attack!" << std::endl;
-	else
-		std::cout << "FR4G-T " << this->name << " attack2 to " << target << std::endl;
+{	
+	std::cout << "FR4G-T " << this->name << " Carl, sai perchè non ti devi mai fidare di un americano? Perché ti USA... CARL! TI USA!!!' - " << target << " è in difficoltà!" << std::endl;
 }
 
 void				FragTrap::attack3(std::string const &target)
 {
-	if (this->energyPoint - 25 < 0)
-		std::cout << "FR4G-T " << this->name << " can't attack!" << std::endl;
-	else
-		std::cout << "FR4G-T " << this->name << " attack3 to " << target << std::endl;
+	std::cout << "FR4G-T " << this->name << ": 'Carl, sai cosa c'è davanti alla torre di Giotto? La torre Digiannove... CARL! LA TORRE DIGIANNOVE!!!' - " << target << " è confuso!" << std::endl;
 }
 
 void				FragTrap::attack4(std::string const &target)
 {
-	if (this->energyPoint - 25 < 0)
-		std::cout << "FR4G-T " << this->name << " can't attack!" << std::endl;
-	else
-		std::cout << "FR4G-T " << this->name << " attack4 to " << target << std::endl;
+	std::cout << "FR4G-T " << this->name << ": 'Carl, sai dove vivevano i dinosauri? In via d'estinzione... CARL! IN VIA D'ESTINZIONE!!!' - " << target <<  " è sfinito!" << std::endl;
 }
 
 void				FragTrap::attack5(std::string const &target)
 {
-	if (this->energyPoint - 25 < 0)
-		std::cout << "FR4G-T " << this->name << " can't attack!" << std::endl;
-	else
-		std::cout << "FR4G-T " << this->name << " attack5 to " << target << std::endl;
+	std::cout << "FR4G-T " << this->name << ": 'Carl, sai perché ci metto un minuto a fare colazione? Perchè soffro di eiacolazione precoce... CARL! EIACOLAZIONE PRECOCE!!!' - " << target <<  " impazisce!" << std::endl;
 }
 
 void		FragTrap::vaulthunter_dot_exe(std::string const &target)
 {
-	int		num;
-
-	srand(time(NULL));
-	num = rand() % 5;
-	if (num == 0)
-		this->attack1(target);
-	else if (num == 1)
-		this->attack2(target);
-	else if (num == 2)
-		this->attack3(target);
-	else if (num == 3)
-		this->attack4(target);
-	else if (num == 4)
-		this->attack5(target);
+	if (this->energyPoint < 25)
+	{
+		std::cout << "FR4G-T " << this->name << " ha finito le battute penose!" << std::endl;
+	}
+	else
+	{
+		this->energyPoint -= 25;
+		int attacco = rand() % 5;
+		if (attacco == 0)
+			this->attack1(target);
+		else if (attacco == 1)
+			this->attack2(target);
+		else if (attacco == 2)
+			this->attack3(target);
+		else if (attacco == 3)
+			this->attack4(target);
+		else if (attacco == 4)
+			this->attack5(target);
+	}
 }
+
+
