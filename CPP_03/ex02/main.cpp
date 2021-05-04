@@ -6,7 +6,7 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 12:35:24 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/04 14:47:34 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/04 14:59:07 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 int main()
 {
+	ClapTrap c = ClapTrap("Il padre di Rick");
+	c.takeDamage(30);
+	c.takeDamage(4);
+	c.beRepaired(35);
+	c.takeDamage(105);
 	FragTrap f = FragTrap("Rick");
 	f.rangedAttack("Zombie");
 	f.meleeAttack("Zombie");

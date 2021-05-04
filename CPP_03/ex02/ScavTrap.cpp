@@ -6,7 +6,7 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 16:39:25 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/04 14:48:06 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/04 14:58:58 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,16 @@ ScavTrap& ScavTrap::operator = (ScavTrap const &op)
 ScavTrap::~ScavTrap()
 {
 	std::cout << "***** SCAVTRAP DESTRUCTOR *****" << std::endl;
+}
+
+void		ScavTrap::rangedAttack(std::string const &target)
+{
+	std::cout << "SC4V-T " << this->name << " colpisce uno " << target << " al piede, causando " << this->rangedAttackDamage << " danni e un buco sul piede!" << std::endl;
+}
+
+void		ScavTrap::meleeAttack(std::string const &target)
+{
+	std::cout << "SC4V-T " << this->name << " colpisce uno " << target << " all'orecchio, causando " << this->meleeAttackDamage << " danni ma lo zombie non ha bisogno di sentire!" << std::endl;
 }
 
 void				ScavTrap::challengeNewcomer(std::string const & target)

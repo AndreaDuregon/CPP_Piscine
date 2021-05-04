@@ -6,7 +6,7 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 12:35:31 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/04 14:47:16 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/04 14:59:48 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ public:
 	FragTrap(FragTrap const &copy);
 	FragTrap& operator = (FragTrap const &op);
 	~FragTrap();
+	void		rangedAttack(std::string const &target);
+	void		meleeAttack(std::string const &target);
 	void		vaulthunter_dot_exe(std::string const & target);
 };

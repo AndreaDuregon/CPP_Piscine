@@ -6,14 +6,16 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 14:27:53 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/04 14:46:42 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/04 14:57:53 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 # include <string>
-# include <iostream> 
+# include <iostream>
+# include <stdlib.h>
+# include <time.h> 
 
 class ClapTrap
 {
@@ -36,8 +38,6 @@ public:
 	void 		setName(std::string n);
 	int			getMaxHitPoint();
 	std::string	getName() const;
-	void		rangedAttack(std::string const &target);
-	void		meleeAttack(std::string const &target);
 	void		takeDamage(unsigned int amount);
 	void		beRepaired(unsigned int amount);
 };

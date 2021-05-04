@@ -6,7 +6,7 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 12:35:27 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/04 14:42:45 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/04 14:58:36 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,16 @@ FragTrap& FragTrap::operator = (FragTrap const &op)
 FragTrap::~FragTrap()
 {
 	std::cout << "***** FRAGTRAP DESTRUCTOR *****" << std::endl;
+}
+
+void		FragTrap::rangedAttack(std::string const &target)
+{
+	std::cout << "FR4G-T " << this->name << " colpisce uno " << target << " al piede, causando " << this->rangedAttackDamage << " danni e un buco sul piede!" << std::endl;
+}
+
+void		FragTrap::meleeAttack(std::string const &target)
+{
+	std::cout << "FR4G-T " << this->name << " colpisce uno " << target << " all'orecchio, causando " << this->meleeAttackDamage << " danni ma lo zombie non ha bisogno di sentire!" << std::endl;
 }
 
 void				FragTrap::attack1(std::string const &target)
