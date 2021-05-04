@@ -6,7 +6,7 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 12:35:27 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/03 16:36:20 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/04 17:17:20 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,7 @@ void		FragTrap::takeDamage(unsigned int amount)
 {
 	amount -= this->armorDamageReduction;
 	if ((int)amount < 0)
-		std::cout << "FR4G-T: La barzelletta faceva ridere ma " << this->name << "non l'ha capita!" << std::endl;
+		std::cout << "FR4G-T: La barzelletta faceva ridere ma " << this->name << " non l'ha capita!" << std::endl;
 	else
 	{
 		this->hitPoint -= amount;
