@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PowerFirst.hpp                                     :+:      :+:    :+:   */
+/*   PowerFist.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/05 12:32:54 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/05 13:30:19 by aduregon         ###   ########.fr       */
+/*   Created: 2021/05/05 12:33:05 by aduregon          #+#    #+#             */
+/*   Updated: 2021/05/05 15:34:16 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "PowerFist.hpp"
 
-#include "AWeapon.hpp"
+PowerFist::PowerFist() : AWeapon("Power Fist", 50, 8)	{}
 
-class PowerFist : public AWeapon
+PowerFist::PowerFist(PowerFist const &copy) : AWeapon(copy)	{}
+
+PowerFist	&PowerFist::operator = (PowerFist const &op)
 {
-private:
-public:
-	PowerFist(/* args */);
-	PowerFist(std::string const &n, int d, int a);
-	PowerFist(PowerFist const &copy);
-	PowerFist &operator = (PowerFist const &op);
-	~PowerFist();
-	void	attack() const;
-};
+	AWeapon::operator=(op);
+	return (*this);
+}
+
+PowerFist::~PowerFist()	{}
+
+void			PowerFist::attack() const
+{
+	std::cout << "* pschhh... SBAM! *" << std::endl;
+}

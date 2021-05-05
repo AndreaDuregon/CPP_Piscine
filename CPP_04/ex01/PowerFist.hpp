@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PowerFirst.cpp                                     :+:      :+:    :+:   */
+/*   PowerFist.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/05 12:33:05 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/05 13:31:38 by aduregon         ###   ########.fr       */
+/*   Created: 2021/05/05 12:32:54 by aduregon          #+#    #+#             */
+/*   Updated: 2021/05/05 15:34:30 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PowerFist.hpp"
+#pragma once
 
-PowerFist::PowerFist() : AWeapon()	{}
+#include "AWeapon.hpp"
 
-PowerFist::PowerFist() : AWeapon("Power Fist", 50, 8)	{}
-
-PowerFist::PowerFist(PowerFist const &copy) : AWeapon(copy)	{}
-
-PowerFist	&PowerFist::operator = (PowerFist const &op)
+class PowerFist : public AWeapon
 {
-	AWeapon::operator=(op);
-	return (*this);
-}
-
-PowerFist::~PowerFist()	{}
-
-void			PowerFist::attack() const
-{
-	std::cout << "* pschhh... SBAM! *" << std::endl;
-}
+private:
+public:
+	PowerFist(/* args */);
+	PowerFist(PowerFist const &copy);
+	PowerFist &operator = (PowerFist const &op);
+	~PowerFist();
+	void	attack() const;
+};

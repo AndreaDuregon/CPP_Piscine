@@ -6,9 +6,14 @@
 /*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 12:36:31 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/05 12:36:50 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/05 16:17:33 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Character.hpp"
+#include "RadScorpion.hpp"
+#include "PlasmaRifle.hpp"
+#include "PowerFist.hpp"
 
 int main()
 {
