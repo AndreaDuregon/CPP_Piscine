@@ -3,13 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 18:48:02 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/05 18:50:29 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/05 23:22:40 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "TacticalMarine.hpp"
+#include "Squad.hpp"
+#include "AssaultTerminator.hpp"
 int main()
 {
 	ISpaceMarine* bob = new TacticalMarine;
