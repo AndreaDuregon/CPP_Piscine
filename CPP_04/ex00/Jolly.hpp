@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sorcerer.hpp                                       :+:      :+:    :+:   */
+/*   Jolly.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/05 09:51:16 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/05 12:27:52 by aduregon         ###   ########.fr       */
+/*   Created: 2021/05/05 12:18:07 by aduregon          #+#    #+#             */
+/*   Updated: 2021/05/05 12:19:05 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-# include <iostream>
-# include "Victim.hpp"
+#include "Victim.hpp"
 
-class Sorcerer
+class Jolly : public Victim
 {
 private:
-	std::string	name;
-	std::string	title;
-	Sorcerer(/* args */);
+	Jolly(/* args */);
 public:
-	Sorcerer(std::string n, std::string t);
-	Sorcerer(Sorcerer const &copy);
-	Sorcerer &operator = (Sorcerer const &op);
-	~Sorcerer();
-	std::string	getName() const;
-	std::string	getTitle() const;
-	void		polymorph(Victim const &v) const;
+	Jolly(std::string n);
+	Jolly(Jolly const &copy);
+	Jolly &operator = (Jolly const &op);
+	~Jolly();
+	void	getPolymorphed() const;
 };
-
-std::ostream &operator << (std::ostream &out, Sorcerer &s);

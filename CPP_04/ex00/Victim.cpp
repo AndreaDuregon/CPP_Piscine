@@ -6,7 +6,7 @@
 /*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 09:51:49 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/05 12:08:57 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/05 12:16:46 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ std::string		Victim::getName() const
 
 void			Victim::getPolymorphed() const
 {
-	std::cout << this->name << "  has been turned into a cute little sheep!" << std::endl;
+	std::cout << this->name << " has been turned into a cute little sheep!" << std::endl;
 }
 
 std::ostream	&operator << (std::ostream &out, Victim &v)
 {
-	out << "I'm " << v.getName() << "  and I like otters!" << std::endl;
+	out << "I'm " << v.getName() << " and I like otters!" << std::endl;
 	return (out);
 }
