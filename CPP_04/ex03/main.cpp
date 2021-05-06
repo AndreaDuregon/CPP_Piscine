@@ -3,12 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 23:37:43 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/05 23:38:05 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:24:49 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Ice.hpp"
+#include "Cure.hpp"
+#include "Character.hpp"
+#include "MateriaSource.hpp"
 
 int main()
 {

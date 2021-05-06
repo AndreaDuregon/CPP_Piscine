@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 23:36:14 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/06 00:10:43 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:27:51 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure() : AMateria("Cure")	{}
+Cure::Cure() : AMateria("cure")	{}
 
 Cure::Cure(Cure const &copy) : AMateria(copy)	{}
 
