@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 12:36:21 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/05 16:17:58 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/06 16:26:39 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ Character &Character::operator = (Character const &op)
 	this->weapon = op.getWeapon();
 	return (*this);
 }
+
+Character::~Character()	{}
 
 std::string		Character::getName() const
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PowerFist.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 12:32:54 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/05 15:34:30 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/06 16:01:00 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ public:
 	PowerFist(/* args */);
 	PowerFist(PowerFist const &copy);
 	PowerFist &operator = (PowerFist const &op);
-	~PowerFist();
+	virtual ~PowerFist();
 	void	attack() const;
 };

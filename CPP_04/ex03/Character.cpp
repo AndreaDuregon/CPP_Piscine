@@ -6,7 +6,7 @@
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 23:36:38 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/06 15:30:54 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/06 17:08:05 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,11 @@ Character	&Character::operator = (Character const &op)
 {
 	this->name = op.getName();
 	for(int i = 0; i < 4; i++)
+	{
+		if (this->inventory[i])
+			delete this->inventory[i];
 		this->inventory[i] = op.inventory[i];
+	}
 	return (*this);
 }
 

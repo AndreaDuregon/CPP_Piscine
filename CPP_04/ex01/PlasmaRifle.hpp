@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PlasmaRifle.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 12:32:30 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/05 15:34:46 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/06 16:01:09 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 	PlasmaRifle(/* args */);
 	PlasmaRifle(PlasmaRifle const &copy);
 	PlasmaRifle &operator = (PlasmaRifle const &op);
-	~PlasmaRifle();
+	virtual ~PlasmaRifle();
 	void	attack() const;
 };
 

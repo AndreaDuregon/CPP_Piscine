@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.cpp                                    :+:      :+:    :+:   */
+/*   Vampire.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/05 12:33:49 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/06 16:30:06 by aduregon         ###   ########.fr       */
+/*   Created: 2021/05/06 16:12:32 by aduregon          #+#    #+#             */
+/*   Updated: 2021/05/06 16:29:36 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "SuperMutant.hpp"
+#include "Vampire.hpp"
 
-SuperMutant::SuperMutant() : Enemy(170, "Super Mutant")
+Vampire::Vampire() : Enemy(75, "Vampire")
 {
-	std::cout << "Gaaah. Me want smash heads!" << std::endl;
+	std::cout << "I need blooood...!" << std::endl;
 }
 
-SuperMutant::SuperMutant(SuperMutant const &copy) : Enemy(copy) {}
+Vampire::Vampire(Vampire const &copy) : Enemy(copy) {}
 
-SuperMutant	&SuperMutant::operator = (SuperMutant const &op)
+Vampire	&Vampire::operator = (Vampire const &op)
 {
 	Enemy::operator=(op);
 	return (*this);
 }
 
-SuperMutant::~SuperMutant()
+Vampire::~Vampire()
 {
-	std::cout << "Aaargh..." << std::endl;
+	std::cout << "AAAAHHHH!!! My heart..." << std::endl;
 }
 
-void		SuperMutant::takeDamage(int d)
+void		Vampire::takeDamage(int d)
 {
-	d -= 3;
 	Enemy::takeDamage(d);
 }
-

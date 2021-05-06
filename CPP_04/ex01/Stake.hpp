@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PlasmaRifle.cpp                                    :+:      :+:    :+:   */
+/*   Stake.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/05 12:32:39 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/06 16:08:34 by aduregon         ###   ########.fr       */
+/*   Created: 2021/05/06 16:16:18 by aduregon          #+#    #+#             */
+/*   Updated: 2021/05/06 16:16:39 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PlasmaRifle.hpp"
+#pragma once
 
-PlasmaRifle::PlasmaRifle() : AWeapon("PlasmaRifle", 21, 5)	{}
+#include "AWeapon.hpp"
 
-PlasmaRifle::PlasmaRifle(PlasmaRifle const &copy) : AWeapon(copy)	{}
-
-PlasmaRifle	&PlasmaRifle::operator = (PlasmaRifle const &op)
+class Stake : public AWeapon
 {
-	AWeapon::operator=(op);
-	return (*this);
-}
-
-PlasmaRifle::~PlasmaRifle()	{}
-
-void			PlasmaRifle::attack() const
-{
-	std::cout << "* piouuu piouuu piouuu *" << std::endl;
-}
+private:
+public:
+	Stake(/* args */);
+	Stake(Stake const &copy);
+	Stake &operator = (Stake const &op);
+	virtual ~Stake();
+	void	attack() const;
+};

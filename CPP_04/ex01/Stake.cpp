@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PlasmaRifle.cpp                                    :+:      :+:    :+:   */
+/*   Stake.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/05 12:32:39 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/06 16:08:34 by aduregon         ###   ########.fr       */
+/*   Created: 2021/05/06 16:16:14 by aduregon          #+#    #+#             */
+/*   Updated: 2021/05/06 16:23:08 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PlasmaRifle.hpp"
+#include "Stake.hpp"
 
-PlasmaRifle::PlasmaRifle() : AWeapon("PlasmaRifle", 21, 5)	{}
+Stake::Stake() : AWeapon("Stake", 75, 5)	{}
 
-PlasmaRifle::PlasmaRifle(PlasmaRifle const &copy) : AWeapon(copy)	{}
+Stake::Stake(Stake const &copy) : AWeapon(copy)	{}
 
-PlasmaRifle	&PlasmaRifle::operator = (PlasmaRifle const &op)
+Stake	&Stake::operator = (Stake const &op)
 {
 	AWeapon::operator=(op);
 	return (*this);
 }
 
-PlasmaRifle::~PlasmaRifle()	{}
+Stake::~Stake()	{}
 
-void			PlasmaRifle::attack() const
+void			Stake::attack() const
 {
-	std::cout << "* piouuu piouuu piouuu *" << std::endl;
+	std::cout << "* ZZZZAAAACCCC *" << std::endl;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Squad.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 18:46:06 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/05 23:23:56 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/06 16:47:01 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Squad	&Squad::operator = (Squad const &op)
 	for(int i = 0; i < this->num; i++)
 	{
 		if (this->sp[i])
-			delete sp[i];
+			delete this->sp[i];
 		this->sp[i] = op.getUnit(i);
 	}
 	return (*this);

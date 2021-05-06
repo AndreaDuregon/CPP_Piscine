@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Peon.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 09:52:00 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/05 12:05:38 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:54:37 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 	Peon(std::string n);
 	Peon(Peon const &copy);
 	Peon &operator = (Peon const &op);
-	~Peon();
+	virtual ~Peon();
 	void	getPolymorphed() const;
 };
 

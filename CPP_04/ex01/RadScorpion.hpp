@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RadScorpion.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 12:35:46 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/05 15:42:11 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/06 16:10:21 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ public:
 	RadScorpion(/* args */);
 	RadScorpion(RadScorpion const &copy);
 	RadScorpion &operator = (RadScorpion const &op);
-	~RadScorpion();
+	virtual ~RadScorpion();
 	void	takeDamage(int d);
 };
