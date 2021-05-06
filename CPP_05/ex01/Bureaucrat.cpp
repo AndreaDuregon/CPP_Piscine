@@ -6,7 +6,7 @@
 /*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 22:21:05 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/07 01:11:21 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/07 01:20:45 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,26 @@ void					Bureaucrat::downgrade()
 		this->grade++;
 }
 
+void					Bureaucrat::toSign(Form &f)
+{
+	if (f.getIsSigned())
+		std::cout << this->name << " cannot sign " << f.getName() << " beacuse is already signed" << std::endl;
+	else
+	{
+		try
+		{
+			f.beSigned(*this);
+			std::cout << this->name << " signs " << f.getName() << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cout << this->name << " cannot sign " << f.getName() << " beacuse his grade is too low" << std::endl;
+			std::cerr << e.what() << '\n';
+		}
+		
+	}
+}
+
 Bureaucrat::GradeTooHighException::GradeTooHighException() throw()	{}
 
 const char	*Bureaucrat::GradeTooHighException::what() const throw()
@@ -83,6 +103,6 @@ const char	*Bureaucrat::GradeTooLowException::what() const throw()
 
 std::ostream	&operator << (std::ostream &out, Bureaucrat &b)
 {
-	out << b.getName() << ",  bureaucrat grade " << b.getGrade() << std::endl;
+	out << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl;
 	return (out);
 }

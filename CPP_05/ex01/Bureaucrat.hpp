@@ -6,7 +6,7 @@
 /*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 22:20:54 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/07 01:11:10 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/07 01:00:06 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 #include <iostream>
 #include <string>
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -30,6 +33,7 @@ public:
 	int					getGrade() const;
 	void				upgrade();
 	void				downgrade();
+	void				toSign(Form &f);
 	class GradeTooHighException : public std::exception
 	{
 	public:
