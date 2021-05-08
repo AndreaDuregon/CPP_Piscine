@@ -27,7 +27,10 @@ fclean	:	clean
 
 re		:	fclean all
 
-test		:
+test	:
 			./$(NAME)
 
-.PHONY	:	all clean fclean re test
+leaks	:
+			leaks --atExit -- ./$(NAME)
+
+.PHONY	:	all clean fclean re test leaks

@@ -6,7 +6,7 @@
 /*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:39:28 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/08 17:43:20 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/08 18:05:27 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 struct Data
 {
-	std::string s1;
-	int n;
-	std::string s2;
+	std::string	s1;
+	int			n;
+	std::string	s2;
 };
 
 void*	serialize(void);

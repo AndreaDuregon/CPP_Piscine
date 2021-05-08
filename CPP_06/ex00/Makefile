@@ -27,16 +27,17 @@ fclean	:	clean
 
 re		:	fclean all
 
-run		:
+test		:
 			./$(NAME) 0
 			./$(NAME) -4.25
-			./$(NAME) 2147483647
-			./$(NAME) -2147483648
 			./$(NAME) nan
 			./$(NAME) 42.0f
 			./$(NAME) inf
 			./$(NAME) -inf	
 			./$(NAME) 448
 			./$(NAME)
+
+leaks	:
+			leaks --atExit -- ./$(NAME) nan
 
 .PHONY	:	all clean fclean re run
