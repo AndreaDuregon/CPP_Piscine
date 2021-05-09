@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 22:21:05 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/07 01:20:45 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/09 12:11:52 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void					Bureaucrat::downgrade()
 		this->grade++;
 }
 
-void					Bureaucrat::toSign(Form &f)
+void					Bureaucrat::signForm(Form &f)
 {
 	if (f.getIsSigned())
 		std::cout << this->name << " cannot sign " << f.getName() << " beacuse is already signed" << std::endl;

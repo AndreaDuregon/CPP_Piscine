@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 22:21:10 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/07 01:23:14 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/09 12:12:09 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main()
 	{
 		std::cout << f1;
 		std::cout << pino;
-		pino.toSign(f1);
+		pino.signForm(f1);
 		std::cout << f1;
 	}
 	catch(const std::exception& e)
@@ -38,8 +38,8 @@ int	main()
 	try
 	{
 		std::cout << gino;
-		gino.toSign(f1);
-		gino.toSign(f2);
+		gino.signForm(f1);
+		gino.signForm(f2);
 		std::cout << f2;
 	}
 	catch(const std::exception& e)
@@ -50,10 +50,10 @@ int	main()
 	try
 	{
 		std::cout << lino;
-		lino.toSign(f3);
+		lino.signForm(f3);
 		std::cout << "\033[32m*** UPGRADE ***\033[0m" << std::endl;
 		lino.upgrade();
-		lino.toSign(f3);
+		lino.signForm(f3);
 		std::cout << f3;
 	}
 	catch(const std::exception& e)

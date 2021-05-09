@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 22:20:54 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/07 01:00:06 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/09 12:11:36 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ public:
 	int					getGrade() const;
 	void				upgrade();
 	void				downgrade();
-	void				toSign(Form &f);
+	void				signForm(Form &f);
 	class GradeTooHighException : public std::exception
 	{
 	public:

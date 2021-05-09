@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 17:31:56 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/08 11:33:54 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/09 12:16:27 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ Form		*Intern::makeForm(std::string const &n, std::string const &t)
 	Form	*ret;
 
 	t_funcForm function[] = {{"Shrubbery Form", &createShrubbery},
-							{"Robotomy Form", &createRobotomy},
-							{"Presidential Form", &createPresidential}};
+							 {"Robotomy Form", &createRobotomy},
+							 {"Presidential Form", &createPresidential}};
 	for (int i = 0; i < 3; i++)
 	{
 		if (function[i].name == n)

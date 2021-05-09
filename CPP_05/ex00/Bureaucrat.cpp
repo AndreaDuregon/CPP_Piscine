@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 22:21:05 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/07 01:11:21 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/09 11:35:49 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ Bureaucrat::Bureaucrat()	{}
 Bureaucrat::Bureaucrat(std::string const n, int g)
 {
 	if (g <= 0)
-		throw Bureaucrat::GradeTooLowException();
-	else if (g > 150)
 		throw Bureaucrat::GradeTooHighException();
+	else if (g > 150)
+		throw Bureaucrat::GradeTooLowException();
 	this->name = n;
 	this->grade = g;
 }
