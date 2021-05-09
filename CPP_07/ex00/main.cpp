@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 20:37:39 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/08 21:10:07 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/09 17:04:27 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "whatever.hpp"
+#include "Awesome.hpp"
 
 int	main()
 {
@@ -54,4 +55,19 @@ int	main()
 	std::cout << "max(10, 10): " << max(b, a) << std::endl;
 	std::cout << "max(10.9, 10.7): " << max(d, c) << std::endl;
 	std::cout << "max('a', 'b'): " << max(f, e) << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+
+	std::cout << "\033[1;37m-------- CORR --------\033[0m" << std::endl;
+	std::cout << std::endl;
+	Awesome x(5);
+	Awesome y(10);
+	Awesome z = min(x, y);
+	std::cout << "min(5, 10):  " << z << std::endl;
+	z = max(x, y);
+	std::cout << "min(5, 10):  " << z << std::endl;
+	std::cout << "x: " << x << " y: " << y << std::endl;
+	swap(x, y);
+	std::cout << "x: " << x << " y: " << y << std::endl;
 }

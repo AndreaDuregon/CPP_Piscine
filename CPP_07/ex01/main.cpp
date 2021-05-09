@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 21:14:35 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/08 21:41:46 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/09 16:36:16 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
+#include "Awesome.hpp"
 
 int main()
 {
@@ -35,4 +36,13 @@ int main()
 	std::cout << std::endl;
 	iter(a4, 5, printArray);
 	std::cout << std::endl;
+
+	int tab[] = { 0, 1, 2, 3, 4 };
+	Awesome tab2[5];
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "\033[1;36m-------------- CRR --------------\033[0m" << std::endl;
+	std::cout << std::endl;
+	iter( tab, 5, printArray);
+	iter( tab2, 5, printArray);
 }
