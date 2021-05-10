@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduregon <aduregon@42.fr>                  +#+  +:+       +#+        */
+/*   By: aduregon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 23:30:44 by aduregon          #+#    #+#             */
-/*   Updated: 2021/05/10 00:40:31 by aduregon         ###   ########.fr       */
+/*   Updated: 2021/05/10 10:12:11 by aduregon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class Span
 {
 private:
 	unsigned int		n;
-public:
 	std::vector<int>	array;
+public:
 	Span(/* args */);
 	Span(unsigned int N);
 	Span(Span const &copy);
